@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Animated Cats",
+    "version": "1.0",
+    "description": "Adds animated cats to your browser.",
+    "permissions": [
+      "activeTab",  
+      "storage"   
+    ],
+    "action": {
+      "default_popup": "popup.html" 
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"], 
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["images/cat1.gif"], 
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
